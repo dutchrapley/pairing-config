@@ -19,7 +19,11 @@
 
 " open project view
   nmap gt :NERDTreeToggle<cr>
+<<<<<<< HEAD
   nmap g :NERDTreeFind<cr>
+=======
+  nmap g :NERDTree \| NERDTreeToggle \| NERDTreeFind<cr>
+>>>>>>> 1f335efa2086a1a1854d5dcd0d9e9bfb4f0d64f5
 
 " close all other windows (in the current tab)
   nmap gW :only<cr>

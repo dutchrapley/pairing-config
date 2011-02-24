@@ -12,6 +12,7 @@ export PATH=$PATH:$EC2_HOME/bin
 export EC2_PRIVATE_KEY=`ls $EC2_HOME/pk-*.pem`
 export EC2_CERT=`ls $EC2_HOME/cert-*.pem`
 
+export PATH=$PATH:/usr/local/bin:/usr/local/sbin
 
 export CDPATH=:~/projects
 export RUBYOPT='rubygems -Itest'
