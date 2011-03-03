@@ -1,6 +1,6 @@
 [user]
-  name  = Leon Gersing
-  email = leon@edgecase.com
+  name = Leon Gersing
+  email = leongersing@gmail.com
 
 [color]
   branch = auto
@@ -23,12 +23,10 @@
   changed   = green
   untracked = cyan
 
-[merge]
-  tool = vimdiff
-
 [core]
   legacyheaders = false
-  excludesfile  = /Users/leon/.gitignore
+  excludesfile = /Users/leon/.gitignore
+  quotepath = false
 
 [repack]
   usedeltabaseoffset = true
@@ -45,8 +43,8 @@
   hist = log --pretty=format:\"%h %ad | %s%d [%an]\" --graph --date=short
 
 [github]
-  user = fallenrogue
-  token = 26317f3d1e301d94efb636a265cd44da
+  user = leongersing
+  token = d1cd9aa876b6a041fc0c3fd809bd086b
 
 [diff "ruby"]
   funcname = ^ *\\(\\(class\\|module\\|def\\) .*\\)
@@ -76,9 +74,15 @@
   authors = Matt Yoho <mby@mattyoho.com>
   authors = Andy A Maleh <andy@obtiva.com>
   authors = Jim Weirich <jim@edgecase.com>
+
+[mergetool "Kaleidoscope"]
+  cmd = ksdiff-wrapper git \"$LOCAL\" \"$REMOTE\"
+
 [difftool "Kaleidoscope"]
-	cmd = ksdiff-wrapper git \"$LOCAL\" \"$REMOTE\"
+  cmd = ksdiff-wrapper git \"$LOCAL\" \"$REMOTE\"
+
 [difftool]
-	prompt = false
+  prompt = false
+
 [diff]
-	tool = Kaleidoscope
+  tool = Kaleidoscope

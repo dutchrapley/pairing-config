@@ -11,3 +11,12 @@ nmap <silent> <Leader>g :LustyBufferGrep<CR>
 
 colorscheme rubyblue
 set guifont=Inconsolata:h20
+let g:rubycomplete_buffer_loading = 1
+let g:rubycomplete_classes_in_global = 1
+let g:rubycomplete_rails = 1
+
+nmap <D-S-]> :tabnext<CR>
+nmap <D-S-[> :tabprev<CR>
+
+nmap <D-S-Right> :tabnext<CR>
+nmap <D-S-Left> :tabprev<CR>
