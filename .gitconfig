@@ -1,49 +1,50 @@
 [user]
-  name  = Pairing Machine
-  email = pairing@edgecase.com
+name = Leon Gersing
+email = leongersing@gmail.com
 
 [color]
-  branch = auto
-  diff   = auto
-  status = auto
+branch = auto
+diff   = auto
+status = auto
 
 [color "branch"]
-  current = yellow reverse
-  local   = yellow
-  remote  = green
+current = yellow reverse
+local   = yellow
+remote  = green
 
 [color "diff"]
-  meta = yellow bold
-  frag = magenta bold
-  old  = red bold
-  new  = green bold
+meta = yellow bold
+frag = magenta bold
+old  = red bold
+new  = green bold
 
 [color "status"]
-  added     = yellow
-  changed   = green
-  untracked = cyan
-
-[merge]
-  tool = opendiff
+added     = yellow
+changed   = green
+untracked = cyan
 
 [core]
-  legacyheaders = false
-  excludesfile  = /Users/pairing/.gitignore
+legacyheaders = false
+excludesfile = /Users/leon/.gitignore
+quotepath = false
 
 [repack]
-  usedeltabaseoffset = true
+usedeltabaseoffset = true
 
 [alias]
-  br   = branch
-  ch   = cherry -v origin
-  ci   = commit
-  co   = checkout
-  df   = diff
-  mine = log --author=Pairing
-  st   = status
-  lg   = log --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%Creset' --graph --abbrev-commit --date=relative  
-  put  = "push origin HEAD"
+  ci = commit
+  co = checkout
+  st = status
+  ch = cherry -v origin
+  mine = log --author=Leon Gersing
+  df = diff
+  br = branch
+  lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
   hist = log --pretty=format:\"%h %ad | %s%d [%an]\" --graph --date=short
+
+[github]
+  user = leongersing
+  token = d1cd9aa876b6a041fc0c3fd809bd086b
 
 [diff "ruby"]
   funcname = ^ *\\(\\(class\\|module\\|def\\) .*\\)
@@ -56,11 +57,10 @@
   merge = refs/heads/master
 
 [git-pair]
-  authors = John Andrews <john.m.andrews@gmail.com>
-  authors = Ken Barker <ken@theedgecase.com>
-  authors = Kevin Farst <kevin@edgecase.com>
+  authors = Adam McCrea <adam@edgecase.com>
+  authors = Leon Gersing <leongersing@gmail.com>
+  authors = Leon Gersing <leon@edgecase.com>
   authors = Felix Flores <felix@edgecase.com>
-  authors = Leon Gersing <fallenrogue@gmail.com>
   authors = Adam McCrea <adam@edgecase.com>
   authors = Monica McJunkin <monica@theedgecase.com>
   authors = Jerry Nummi <jerry@edgecase.com>
@@ -76,3 +76,15 @@
   authors = Jim Weirich <jim@edgecase.com>
   authors = Scott Barron <scott@edgecase.com>
   authors = Aaron Christy <aaron@edgecase.com>
+
+[mergetool "Kaleidoscope"]
+  cmd = ksdiff-wrapper git \"$LOCAL\" \"$REMOTE\"
+
+[difftool "Kaleidoscope"]
+  cmd = ksdiff-wrapper git \"$LOCAL\" \"$REMOTE\"
+
+[difftool]
+  prompt = false
+
+[diff]
+  tool = Kaleidoscope

@@ -1,3 +1,5 @@
+" no transparency for me
+  set transparency=0
 " a more laptop-friendly font size
   set guifont=Monaco:h15
 

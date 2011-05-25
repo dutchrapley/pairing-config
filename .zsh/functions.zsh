@@ -72,3 +72,7 @@ function git_bd { # git local branch deletion
 
   git branch
 }
+function hamlize(){
+  find app/views -name '*erb' | xargs html2haml -r
+}
+
