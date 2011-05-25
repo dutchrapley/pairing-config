@@ -4,10 +4,13 @@ alias ajaxrdoc="rdoc --fmt ajax --exclude '.*generator.*' --exclude '.*test.*' -
 alias c='clear'
 alias cpwd="pwd | ruby -pe'\$_.chomp!' | pbcopy"
 alias grep='grep --color --line-number'
+alias vim='mvim -v' #use mvim version of vim as terminal vim
 alias gvim='mvim -p'
 alias ll='ls -lF' # long format listing; add / to end of directories
-alias la='ls -aF' # include dot files in listing; add / to end of directories
+alias la='ls -alF' # include dot files in listing; add / to end of directories
 alias mv='mv -i' # prompt before moving a file that would overwrite an existing file
+alias watch='watchr ~/.watchr.rb'
+alias lop='sudo lsof -i -P | grep -i "listen"' # show open ports
 
 # PRETTY THINGS, SO WHAT THAT I LIKE PRETTY THINGS. 
 alias icons='cd ~/Pictures/icons; open -a Preview **/*.png **/*.tiff  **/*.jpg'
@@ -54,7 +57,7 @@ alias gd='git diff'
 alias gdc='git diff --cached'
 alias go='git co'
 alias getch='git fetch'
-alias tug='git pull -r'
+alias tug='git pull -r origin'
 
 # cap
 alias plog='cap SERVER=web production slice:tail_environment_logs'
