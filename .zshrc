@@ -8,11 +8,9 @@ source ~/.zsh/completion_rake.zsh
 source ~/.zsh/exports.zsh
 source ~/.zsh/functions.zsh
 source ~/.zsh/history.zsh
+source ~/.zsh/hitch.zsh
 source ~/.zsh/prompt.zsh
 source ~/.zsh/set_options.zsh
+source /opt/boxen/env.sh
 
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"  
 
-alias jruby='jruby-1.5.6'
-alias jgem='gem-jruby-1.5.6'
-alias jirb='irb-jruby-1.5.6'

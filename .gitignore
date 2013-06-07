@@ -54,3 +54,5 @@ TAGS
 db/GeoLiteCity.dat
 lib_ext/
 .idea
+
+*.zwc

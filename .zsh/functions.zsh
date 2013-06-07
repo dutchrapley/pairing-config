@@ -51,6 +51,24 @@ function hamlize(){
   find app/views -name '*erb' | xargs html2haml -r
 }
 
+function zsh_recompile {
+  autoload -U zrecompile
+  rm -f ~/.zsh/*.zwc
+  [[ -f ~/.zshrc ]] && zrecompile -p ~/.zshrc
+  [[ -f ~/.zshrc.zwc.old ]] && rm -f ~/.zshrc.zwc.old
+
+  for f in ~/.zsh/**/*.zsh; do
+    [[ -f $f ]] && zrecompile -p $f
+    [[ -f $f.zwc.old ]] && rm -f $f.zwc.old
+  done
+
+  [[ -f ~/.zcompdump ]] && zrecompile -p ~/.zcompdump
+  [[ -f ~/.zcompdump.zwc.old ]] && rm -f ~/.zcompdump.zwc.old
+
+  source ~/.zshrc
+}
+
+
 function git_bd { # git local branch deletion
   # deletes any pivotally numbered feature branches
   # branches without a remote are kept
