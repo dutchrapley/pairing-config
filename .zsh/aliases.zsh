@@ -14,9 +14,9 @@ alias icons='cd ~/Pictures/icons; open -a Preview **/*.png **/*.tiff  **/*.jpg'
 alias preview='open -a Preview'
 
 # Databses
-alias mysql='/usr/local/bin/mysql -u root --socket=/tmp/mysql.sock'
-alias mysqladmin='/usr/local/bin/mysqladmin -u root --socket=/tmp/mysql.sock'
-alias mysql_config='/usr/local/bin/mysql_config'
+alias mysql='mysql -u root --socket=/tmp/mysql.sock'
+alias mysqladmin='mysqladmin -u root --socket=/tmp/mysql.sock'
+alias mysql_config='mysql_config'
 alias pg_start='pg_ctl -D /usr/local/var/postgres -l /usr/local/var/postgres/server.log start'
 alias pg_stop='pg_ctl -D /usr/local/var/postgres stop -s -m fast'
 
@@ -48,7 +48,7 @@ alias gp='git pair'
 alias push='git push'
 alias rebase='git fetch; git rebase origin/master'
 alias st='git status'
-alias gst='git status'
+alias gs='git status'
 alias gc='git commit'
 alias gd='git diff'
 alias gdc='git diff --cached'
@@ -63,3 +63,6 @@ alias tagit='ctags -R --exclude=.git --exclude=log --exclude=test --exclude=spec
 
 # pow
 alias powboot='touch tmp/restart.txt'
+
+# bundler
+alias be='bundle exec'
