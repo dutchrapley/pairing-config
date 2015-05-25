@@ -1,6 +1,6 @@
 [user]
   name  = Leon Gersing
-  email = leon@edgecase.com
+  email = leongersing@gmail.com
 
 [color]
   branch = auto
@@ -36,7 +36,7 @@
   ci   = commit
   co   = checkout
   df   = diff
-  mine = log --author=Pairing
+  mine = log --author='Leon Gersing'
   st   = status
   lg   = log --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%Creset' --graph --abbrev-commit --date=relative  
   put  = "push origin HEAD"
@@ -75,12 +75,4 @@
   authors = Aaron Christy <aaron@edgecase.com>
   authors = Jason Robb <jlrobb@irco.com>
 
-[difftool "Kaleidoscope"]
-[difftool]
-[diff]
-[difftool "Kaleidoscope"]
-	cmd = ksdiff-wrapper git \"$LOCAL\" \"$REMOTE\"
-[difftool]
-	prompt = false
-[diff]
-	tool = Kaleidoscope
+
