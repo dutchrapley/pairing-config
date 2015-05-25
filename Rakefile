@@ -3,17 +3,17 @@ require 'rake'
 
 desc "attempt to symlink all dot files from the current user's home directory"
 task :symlink do
-  symlink(:skip => '.gitconfig')
+  _symlink(:skip => '.gitconfig')
 end
 
 namespace :symlink do
   desc "symlink all dot files (including .gitconfig) from the current user's home directory"
   task :pairing do
-    symlink
+    _symlink
   end
 end
 
-def symlink(options = {})
+def _symlink(options = {})
   files = Dir.glob('.*') - ['.git', '.gitmodules', '.', '..'] - [options[:skip]]
   files.each do |file|
     case

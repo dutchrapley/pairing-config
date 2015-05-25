@@ -11,6 +11,5 @@ source ~/.zsh/history.zsh
 source ~/.zsh/hitch.zsh
 source ~/.zsh/prompt.zsh
 source ~/.zsh/set_options.zsh
-source /opt/boxen/env.sh
 
 
